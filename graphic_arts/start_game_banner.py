@@ -15,10 +15,10 @@ def animation(screen):
     print(text)
     effects = [
         Print(screen,
-              Fire(screen.height, 80, text, 0.4, 40, screen.colours),
+              Fire(screen.height, 90, text, 0.4, 40, screen.colours),
               0,
-              speed=1,
-              transparent=False,
+              speed=0.5,
+              transparent=True,
               ),
         Print(screen,
               FigletText("Real Practic Game", "banner"),
@@ -34,7 +34,7 @@ def animation(screen):
     ]
     scenes.append(Scene(effects, -1))
 
-    screen.play(scenes, stop_on_resize=True)
+    screen.play(scenes, stop_on_resize=False)
 
 
 def run_screensaver():
